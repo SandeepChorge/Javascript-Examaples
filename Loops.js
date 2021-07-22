@@ -7,7 +7,7 @@
 //For Checking if Number is Glimmer or not
 //checkGlimmerNo(808);
 
-function Check(check) {
+export function Check(check) {
   switch (check) {
     case 1: //if else
       let a = 10;

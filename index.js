@@ -2,6 +2,11 @@ const arr = [10, 20, 30, 40, 50, 10];
 const hege = ['Cecilie', 'Lone'];
 const stale = ['Emil', 'Tobias', 'Linus'];
 
+import * as wen from './Loops.js';
+wen.Check(1);
+
+
+/*
 //PROTOTYPE --- The prototype is a global constructor available for all JavaScript objects.prototype referes to the global Array() object.
 
 Array.prototype.myUcase = function() {
@@ -89,3 +94,5 @@ function checkAge(age) {
   return age >= 10;
 }
 console.log(everyTest);
+*/
+
