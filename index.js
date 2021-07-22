@@ -2,9 +2,25 @@ const arr = [10, 20, 30, 40, 50, 10];
 const hege = ['Cecilie', 'Lone'];
 const stale = ['Emil', 'Tobias', 'Linus'];
 
-console.log('This is ');
+//PROTOTYPE --- The prototype is a global constructor available for all JavaScript objects.prototype referes to the global Array() object.
 
-/*
+Array.prototype.myUcase = function() {
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i].toUpperCase();
+  }
+};
+hege.myUcase();
+stale.myUcase();
+console.log('arr', hege);
+console.log('arr', stale);
+
+//PUSH --- adds element in the array at the end
+//POP --- Removes last element from the array and returns it
+console.log('Before Push ', arr);
+arr.push(100);
+console.log('After Push ', arr);
+console.log('Popping last element ', arr.pop());
+console.log('After Pop ', arr);
 
 //JOIN --- it returns the single string from array with spererator mentioned
 console.log(stale.join(' and '));
@@ -29,7 +45,6 @@ const a = arr2.reduce(function(acc, current) {
 if (input == a) console.log(input, 'is a glimmer number');
 else console.log(input, 'is not a glimmer number');
 
-
 //Array.from --- It converts string into the character array
 const ar = Array.from('1634');
 console.log('Operation is ' + ar);
@@ -45,27 +60,27 @@ function checkFind(item) {
 console.log(findOp);
 
 //FIND --- it checks for the values if present it returns the values and does not continue checking next values if not found till the end then it returns undefined
-const findOp = arr.find(checkFind);
+const findOp2 = arr.find(checkFind);
 function checkFind(item) {
   return item == 20;
 }
-console.log(findOp);
+console.log(findOp2);
 
 //FILL ---- replaces array elements on specified position with mentioned element, if range not provided it replaces all the elements
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.fill("Kiwi",1,3);
+const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.fill('Kiwi', 1, 3);
 console.log(fruits);
 
 //FILTER --- filters the array elements with specified condition and returns filtered output
-const op1 = arr.filter((x) => x>30);
-console.log("Filter > 30 ",op1)
+const op1 = arr.filter(x => x > 30);
+console.log('Filter > 30 ', op1);
 
 //CONCAT --- Concatenates multiple arrays
-const children = arr.concat(hege,stale);
-console.log("Find index ",children);
+const children = arr.concat(hege, stale);
+console.log('Find index ', children);
 
 //COPYWITHIN --- copies the element at the specified index, replacing the existing entry   target, source
-stale.copyWithin(1,0);
+stale.copyWithin(1, 0);
 console.log(stale);
 
 //EVERY --- it evaluates the function for every element in array and return true if all the elements satisfies condition
@@ -74,4 +89,3 @@ function checkAge(age) {
   return age >= 10;
 }
 console.log(everyTest);
-*/
